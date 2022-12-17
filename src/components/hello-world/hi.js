@@ -1,3 +1,3 @@
-export function hi() {
-	return "Hello World";
+export function hi(name) {
+	return `Hello ${name}`;
 }

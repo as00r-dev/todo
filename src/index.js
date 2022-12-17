@@ -7,6 +7,6 @@ const body = document.querySelector("body");
 // create root element
 const root = document.createElement("div");
 
-root.textContent = hi();
+root.textContent = hi("Sanskar");
 
 body.appendChild(root);
