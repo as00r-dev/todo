@@ -1,3 +1,12 @@
-const content = document.querySelector(".content");
+// imports
+import { hi } from "./components/hello-world/hi";
 
-content.textContent = "Hello World";
+// select body
+const body = document.querySelector("body");
+
+// create root element
+const root = document.createElement("div");
+
+root.textContent = hi();
+
+body.appendChild(root);
