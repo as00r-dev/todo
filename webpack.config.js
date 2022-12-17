@@ -1,9 +1,15 @@
 var path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-	mode: "production",
+	mode: "development",
 	entry: "./src/index.js",
 	devtool: "inline-source-map",
+	plugins: [
+		new HtmlWebpackPlugin({
+			title: "Todo App",
+		}),
+	],
 	output: {
 		filename: "main.js",
 		path: path.resolve(__dirname, "dist"),
@@ -13,7 +19,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.css$/i,
-				use: [style-loader, css-loader],
+				use: [style - loader, css - loader],
 			},
 			{
 				test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
@@ -25,4 +31,4 @@ module.exports = {
 			},
 		],
 	},
-}
+};
