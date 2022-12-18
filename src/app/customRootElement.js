@@ -1,4 +1,8 @@
 class MyApp extends HTMLElement {
+	constructor() {
+		super();
+	}
+
 	connectedCallback() {
 		console.log("App element connected!");
 	}
