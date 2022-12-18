@@ -1,0 +1,24 @@
+/*
+ 12px, 13px, 14px, 16px, 21px
+
+ regular, bold
+
+ black-prim, black-second, red, white-primary, white-second
+*/
+
+:root {
+	--color-dark-500: #110403;
+	--color-dark-300: #57140f;
+	--color-primary: #c03221;
+	--color-light-500: #f7f7ff;
+	--color-light-300: #f3bfb9;
+
+	--fs-500: 0.875rem;
+	--fs-400: 0.8125rem;
+	--fs-300: 0.75rem;
+	--fs-600: 1rem;
+	--fs-700: 1.3125rem;
+
+	--fw-regular: 400;
+	--fw-bold: 700;
+}
