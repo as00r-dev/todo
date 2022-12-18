@@ -1,4 +1,4 @@
-import { app } from "../../../app/todoElem";
+import { app } from "../../app/todo-html-tag";
 
 export const body = document.querySelector("body");
 

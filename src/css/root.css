@@ -1,16 +1,8 @@
-/*
- 12px, 13px, 14px, 16px, 21px
-
- regular, bold
-
- black-prim, black-second, red, white-primary, white-second
-*/
-
 :root {
-	--color-dark-500: #110403;
+	--color-dark-400: #110403;
 	--color-dark-300: #57140f;
 	--color-primary: #c03221;
-	--color-light-500: #f7f7ff;
+	--color-light-400: #f7f7ff;
 	--color-light-300: #f3bfb9;
 
 	--fs-500: 0.875rem;
@@ -21,4 +13,12 @@
 
 	--fw-regular: 400;
 	--fw-bold: 700;
+
+	--ws-100: 0.3125rem;
+	--ws-200: 0.5rem;
+	--ws-400: 1.125rem;
+	--ws-700: 3.4375rem;
+
+	--f-gap: var(--ws-400);
+	--g-gap: var(--ws-400);
 }
