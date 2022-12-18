@@ -1,12 +1,10 @@
 // imports
-import { hi } from "./components/hello-world/hi";
+import { hi } from "./ui/components/hello-world/hi";
+import { app } from "./app/customRootElement";
 
 // select body
 const body = document.querySelector("body");
 
-// create root element
-const root = document.createElement("div");
+app.textContent = hi("Sanskar");
 
-root.textContent = hi("Sanskar");
-
-body.appendChild(root);
+body.appendChild(app);
