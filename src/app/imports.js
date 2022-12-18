@@ -1,5 +1,4 @@
 import { app } from "./todoElem";
-import { hi } from "../ui/components/hello-world/hi";
-import { body } from "../ui/components/body/body";
+import { body } from "../ui/dom-elems/body/body";
 
-export { hi, body, app };
+export { body, app };
