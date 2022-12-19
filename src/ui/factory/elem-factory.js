@@ -1,7 +1,7 @@
 export const ElementFactory = (elemName) => {
 	const element = document.createElement(elemName);
 
-	const getElem = () => element;
+	const getElem = (() => element)();
 
 	const addContent = (content) => {
 		element.textContent = content;
