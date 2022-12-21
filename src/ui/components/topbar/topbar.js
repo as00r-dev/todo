@@ -1,12 +1,12 @@
-import { Header } from "../elem/header";
-import { Nav } from "../elem/nav";
-import { Div } from "../elem/div";
-import { Button } from "../elem/button";
-import { Ul } from "../elem/ul";
-import { Li } from "../elem/li";
-import { a } from "../elem/a";
+import { Header } from "../../elem/header/header";
+import { Nav } from "../../elem/nav/nav";
+import { Div } from "../../elem/div/div";
+import { Button } from "../../elem/button/button";
+import { Ul } from "../../elem/ul/ul";
+import { Li } from "../../elem/li/li";
+import { a } from "../../elem/a/a";
 
-const Topbar = (() => {
+export const Topbar = (() => {
 	// <header>
 	const header = Header();
 
