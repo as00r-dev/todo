@@ -1,5 +1,5 @@
 import { ElementFactory } from "../../factory/elem-factory";
 
-export const a = () => {
+export const A = () => {
 	return ElementFactory("a");
 };

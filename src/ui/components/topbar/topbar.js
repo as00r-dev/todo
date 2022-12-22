@@ -5,7 +5,7 @@ import { Div } from "../../elem/div/div";
 import { Button } from "../../elem/button/button";
 import { Ul } from "../../elem/ul/ul";
 import { Li } from "../../elem/li/li";
-import { a } from "../../elem/a/a";
+import { A } from "../../elem/a/a";
 import MenuIcon from "../../../assets/images/menu-icon.svg";
 import HomeIcon from "../../../assets/images/1515716962.svg";
 import PlusIcon from "../../../assets/images/ftadd.svg";
@@ -35,30 +35,32 @@ export const Topbar = (() => {
 		container.getElem.append(col.getElem);
 	});
 
-	// <div class="logo">
-	// 	 <img src="logo_url">
-	// </div>
-	const logo = Div();
-	logo.addClasses(["icon", "pt-xsmall", "pd-xsmall", "ps-xsmall"]);
-	const logoImg = new Image();
-	logoImg.src = MenuIcon;
-	logo.getElem.append(logoImg);
-	cols[0].getElem.append(logo.getElem);
+	// <button class="menu">
+	// 	 <img src="menu_url">
+	// </button>
+	const menu = Button();
+	menu.addOrChangeAttribute("aria-expanded", "false");
+	menu.addOrChangeAttribute("aria-controls", "primary-navigation");
+	menu.addClasses(["hamburger", "icon", "pt-xsmall", "pd-xsmall", "ps-xsmall"]);
+	const menuImg = new Image();
+	menuImg.src = MenuIcon;
+	menu.getElem.append(menuImg);
+	cols[0].getElem.append(menu.getElem);
 
-	// <div class="home">
+	// <button class="home">
 	// 	 <img src="home_url">
-	// </div>
-	const home = Div();
+	// </button>
+	const home = Button();
 	home.addClasses(["icon", "pt-xsmall", "pd-xsmall", "ps-xsmall"]);
 	const homeImg = new Image();
 	homeImg.src = HomeIcon;
 	home.getElem.append(homeImg);
 	cols[0].getElem.append(home.getElem);
 
-	// <div class="plus">
+	// <button class="plus">
 	// 	 <img src="plus_url">
-	// </div>
-	const plus = Div();
+	// </button>
+	const plus = Button();
 	plus.addClasses(["icon", "pt-xsmall", "pd-xsmall", "ps-xsmall"]);
 	const plusImg = new Image();
 	plusImg.src = PlusIcon;
