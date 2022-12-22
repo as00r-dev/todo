@@ -13,6 +13,7 @@ import PlusIcon from "../../../assets/images/ftadd.svg";
 export const Topbar = (() => {
 	// <header>
 	const header = Header();
+	header.addClasses(["bg-primary"]);
 
 	// <div class="container">
 	const container = Div();
@@ -38,7 +39,7 @@ export const Topbar = (() => {
 	// 	 <img src="logo_url">
 	// </div>
 	const logo = Div();
-	logo.addClasses(["icon"]);
+	logo.addClasses(["icon", "pt-xsmall", "pd-xsmall", "ps-xsmall"]);
 	const logoImg = new Image();
 	logoImg.src = MenuIcon;
 	logo.getElem.append(logoImg);
@@ -48,7 +49,7 @@ export const Topbar = (() => {
 	// 	 <img src="home_url">
 	// </div>
 	const home = Div();
-	home.addClasses(["icon"]);
+	home.addClasses(["icon", "pt-xsmall", "pd-xsmall", "ps-xsmall"]);
 	const homeImg = new Image();
 	homeImg.src = HomeIcon;
 	home.getElem.append(homeImg);
@@ -58,7 +59,7 @@ export const Topbar = (() => {
 	// 	 <img src="plus_url">
 	// </div>
 	const plus = Div();
-	plus.addClasses(["icon"]);
+	plus.addClasses(["icon", "pt-xsmall", "pd-xsmall", "ps-xsmall"]);
 	const plusImg = new Image();
 	plusImg.src = PlusIcon;
 	plus.getElem.append(plusImg);

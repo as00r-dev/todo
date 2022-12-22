@@ -156,3 +156,26 @@
 	width: 25px;
 	height: 25px;
 }
+
+/* 
+ *  Background Colors 
+ */
+.bg-primary {
+	background: var(--color-primary);
+}
+
+.bg-dark-400 {
+	background: var(--color-dark-400);
+}
+
+.bg-dark-300 {
+	background: var(--color-dark-300);
+}
+
+.bg-light-400 {
+	background: var(--color-light-400);
+}
+
+.bg-light-300 {
+	background: var(--color-light-300);
+}
