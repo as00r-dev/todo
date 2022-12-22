@@ -3,6 +3,7 @@
  */
 .container {
 	width: 80%;
+	margin: 0 auto;
 }
 
 /* 
@@ -26,6 +27,18 @@
 	flex-direction: row;
 }
 
+.justify-center {
+	justify-content: center;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.align-center {
+	align-items: center;
+}
+
 /* 
  *  Padding 
  */
@@ -46,19 +59,19 @@
 }
 
 .pd-xsmall {
-	padding-top: var(--ws-100);
+	padding-bottom: var(--ws-100);
 }
 
 .pd-small {
-	padding-top: var(--ws-200);
+	padding-bottom: var(--ws-200);
 }
 
 .pd-regular {
-	padding-top: var(--ws-400);
+	padding-bottom: var(--ws-400);
 }
 
 .pd-large {
-	padding-top: var(--ws-700);
+	padding-bottom: var(--ws-700);
 }
 
 .ps-xsmall {
@@ -101,19 +114,19 @@
 }
 
 .md-xsmall {
-	margin-top: var(--ws-100);
+	margin-bottom: var(--ws-100);
 }
 
 .md-small {
-	margin-top: var(--ws-200);
+	margin-bottom: var(--ws-200);
 }
 
 .md-regular {
-	margin-top: var(--ws-400);
+	margin-bottom: var(--ws-400);
 }
 
 .md-large {
-	margin-top: var(--ws-700);
+	margin-bottom: var(--ws-700);
 }
 
 .ms-xsmall {
@@ -134,4 +147,12 @@
 .ms-large {
 	margin-left: var(--ws-700);
 	margin-right: var(--ws-700);
+}
+
+/* 
+ *  Icons 
+ */
+.icon img {
+	width: 25px;
+	height: 25px;
 }
