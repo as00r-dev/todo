@@ -1,5 +1,6 @@
 var path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 module.exports = {
 	mode: "development",
@@ -7,9 +8,9 @@ module.exports = {
 	devtool: "inline-source-map",
 	plugins: [
 		new HtmlWebpackPlugin({
-			favicon: "./favicon.ico",
 			title: "Todo App",
 		}),
+		new FaviconsWebpackPlugin("./src/assets/images/favicon.ico"),
 	],
 	output: {
 		filename: "main.js",

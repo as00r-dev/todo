@@ -6,7 +6,6 @@ import { Div } from "./ui/elem/div/div";
 
 const root = Div();
 root.addClasses(["root"]);
-console.log(Topbar);
 root.getElem.append(Topbar.getElem);
 
 root.render(document.body, "afterbegin");
