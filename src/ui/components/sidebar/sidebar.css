@@ -1,0 +1,8 @@
+aside {
+	position: absolute;
+	inset: 0 0 0 0;
+}
+
+aside .container {
+	height: 100%;
+}
