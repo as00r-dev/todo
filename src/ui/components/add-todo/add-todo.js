@@ -1,15 +1,10 @@
 import "./add-todo.css";
-import { Aside } from "../../elem/aside/aside";
-import { Nav } from "../../elem/nav/nav";
 import { Div } from "../../elem/div/div";
 import { Button } from "../../elem/button/button";
-import { Ul } from "../../elem/ul/ul";
-import { Li } from "../../elem/li/li";
 import { A } from "../../elem/a/a";
 import { Heading } from "../../elem/heading/heading";
-import MenuIcon from "../../../assets/images/menu-icon.svg";
-import HomeIcon from "../../../assets/images/1515716962.svg";
-import PlusIcon from "../../../assets/images/ftadd.svg";
+import { Form } from "../../elem/form/form";
+import { Input } from "../../elem/input/input";
 
 export const AddTodo = (() => {
 	// <div class="add-todo">

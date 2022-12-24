@@ -1,11 +1,7 @@
 import "./topbar.css";
 import { Header } from "../../elem/header/header";
-import { Nav } from "../../elem/nav/nav";
 import { Div } from "../../elem/div/div";
 import { Button } from "../../elem/button/button";
-import { Ul } from "../../elem/ul/ul";
-import { Li } from "../../elem/li/li";
-import { A } from "../../elem/a/a";
 import MenuIcon from "../../../assets/images/menu-icon.svg";
 import HomeIcon from "../../../assets/images/1515716962.svg";
 import PlusIcon from "../../../assets/images/ftadd.svg";
@@ -57,6 +53,7 @@ export const Topbar = (() => {
 			menu.getElem.setAttribute("aria-expanded", "false");
 		}
 	});
+
 	// <button class="home">
 	// 	 <img src="home_url">
 	// </button>
