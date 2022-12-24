@@ -48,12 +48,7 @@ export const Topbar = (() => {
 	cols[0].getElem.append(menu.getElem);
 	menu.getElem.addEventListener("click", () => {
 		const aside = document.querySelector("[data-visible]");
-		const asideVisibility = aside.getAttribute("data-visible");
 		const menuVisibility = menu.getElem.getAttribute("aria-expanded");
-		// console.log(
-		// 	aside.getAttribute("data-visible"),
-		// 	menu.getElem.getAttribute("aria-expanded")
-		// );
 		if (menuVisibility === "false") {
 			aside.setAttribute("data-visible", "true");
 			menu.getElem.setAttribute("aria-expanded", "true");

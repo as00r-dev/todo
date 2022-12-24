@@ -11,10 +11,10 @@ import { Topbar } from "../../components/topbar/topbar";
 import { Sidebar } from "../../components/sidebar/sidebar";
 import { Dashboard } from "../../components/dashboard/dashboard";
 
-console.log(Sidebar);
 // Render Page
 Topbar.render(Root.getElem, "afterbegin");
 Sidebar.render(Topbar.getElem, "afterend");
+// Dashboard.render(Sidebar.getElem, "afterend");
 
 // Render root element
 Root.render(document.body, "afterbegin");

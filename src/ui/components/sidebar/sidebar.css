@@ -1,6 +1,6 @@
 aside {
 	position: fixed;
-	inset: 0 0 0 0;
+	inset: 75px 0 0 0;
 	transition: all 0.3s ease-in-out;
 }
 
@@ -14,6 +14,6 @@ aside[data-visible="false"] {
 
 @media (min-width: 768px) {
 	aside {
-		width: 250px;
+		width: min(30vw, 30rem);
 	}
 }
