@@ -14,7 +14,7 @@ import { Dashboard } from "../../components/dashboard/dashboard";
 // Render Page
 Topbar.render(Root.getElem, "afterbegin");
 Sidebar.render(Topbar.getElem, "afterend");
-// Dashboard.render(Sidebar.getElem, "afterend");
+Dashboard.render(Sidebar.getElem, "afterend");
 
 // Render root element
 Root.render(document.body, "afterbegin");

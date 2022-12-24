@@ -35,6 +35,7 @@ export const Topbar = (() => {
 	// 	 <img src="menu_url">
 	// </button>
 	const menu = Button();
+	menu.addOrChangeAttribute("id", "header-hamburger");
 	menu.addOrChangeAttribute("aria-expanded", "false");
 	menu.addOrChangeAttribute("aria-controls", "primary-navigation");
 	menu.addClasses(["hamburger", "icon", "pt-xsmall", "pd-xsmall", "ps-xsmall"]);
@@ -43,7 +44,7 @@ export const Topbar = (() => {
 	menu.getElem.append(menuImg);
 	cols[0].getElem.append(menu.getElem);
 	menu.getElem.addEventListener("click", () => {
-		const aside = document.querySelector("[data-visible]");
+		const aside = document.querySelector("#primary-navigation");
 		const menuVisibility = menu.getElem.getAttribute("aria-expanded");
 		if (menuVisibility === "false") {
 			aside.setAttribute("data-visible", "true");
@@ -68,11 +69,22 @@ export const Topbar = (() => {
 	// 	 <img src="plus_url">
 	// </button>
 	const plus = Button();
+	plus.addOrChangeAttribute("id", "header-add");
+	plus.addOrChangeAttribute("aria-expanded", "false");
 	plus.addClasses(["icon", "pt-xsmall", "pd-xsmall", "ps-xsmall"]);
+	plus.addOrChangeAttribute("aria-controls", "add-todo");
 	const plusImg = new Image();
 	plusImg.src = PlusIcon;
 	plus.getElem.append(plusImg);
 	cols[1].getElem.append(plus.getElem);
+	plus.getElem.addEventListener("click", () => {
+		const addTodo = document.querySelector("#add-todo");
+		const addVisibility = plus.getElem.getAttribute("aria-expanded");
+		if (addVisibility === "false") {
+			addTodo.setAttribute("data-visible", "true");
+			plus.getElem.setAttribute("aria-expanded", "true");
+		}
+	});
 
 	return header;
 })();

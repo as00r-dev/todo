@@ -152,6 +152,12 @@
 /* 
  *  Icons 
  */
+.icon {
+	outline: 0;
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+}
 .icon img {
 	width: 25px;
 	height: 25px;
@@ -178,4 +184,41 @@
 
 .bg-light-300 {
 	background: var(--color-light-300);
+}
+
+.bg-blur {
+	background: rgba(255, 255, 255, 0.16);
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+	.bg-blur {
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+	}
+}
+
+/*
+ * Shadows
+ */
+.box-shadow-400 {
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+/*
+ * Border-Radius
+ */
+.br-300 {
+	border-radius: 6px;
+}
+
+.br-400 {
+	border-radius: 8px;
+}
+
+.br-700 {
+	border-radius: 32px;
+}
+
+.br-900 {
+	border-radius: 100%;
 }
