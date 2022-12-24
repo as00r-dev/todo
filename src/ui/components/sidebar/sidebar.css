@@ -1,8 +1,19 @@
 aside {
-	position: absolute;
+	position: fixed;
 	inset: 0 0 0 0;
+	transition: all 0.3s ease-in-out;
 }
 
 aside .container {
 	height: 100%;
+}
+
+aside[data-visible="false"] {
+	transform: translateX(-100%);
+}
+
+@media (min-width: 768px) {
+	aside {
+		width: 250px;
+	}
 }

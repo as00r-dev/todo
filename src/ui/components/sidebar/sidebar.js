@@ -6,6 +6,7 @@ import { Button } from "../../elem/button/button";
 import { Ul } from "../../elem/ul/ul";
 import { Li } from "../../elem/li/li";
 import { A } from "../../elem/a/a";
+import { Heading } from "../../elem/heading/heading";
 import MenuIcon from "../../../assets/images/menu-icon.svg";
 import HomeIcon from "../../../assets/images/1515716962.svg";
 import PlusIcon from "../../../assets/images/ftadd.svg";
@@ -15,6 +16,7 @@ export const Sidebar = (() => {
 	const sidebar = Aside();
 	sidebar.addClasses(["bg-light-300"]);
 	sidebar.addOrChangeAttribute("id", "primary-navigation");
+	sidebar.addOrChangeAttribute("data-visible", "false");
 
 	// <div class="container">
 	const container = Div();
@@ -32,10 +34,15 @@ export const Sidebar = (() => {
 	// <div class="col">
 	const cols = [Div(), Div()];
 	cols[0].addClasses(["col", "flex"]);
-	cols[1].addClasses(["col", "flex"]);
+	cols[1].addClasses(["col", "flex", "flex-col"]);
 	cols.forEach((col) => {
 		container.getElem.append(col.getElem);
 	});
+
+	// <h3></h3>
+	const projectHeading = Heading(3);
+	projectHeading.addContent("Projects");
+	projectHeading.render(cols[1].getElem, "afterbegin");
 
 	// <ul></ul>
 	const schedule = Ul();
@@ -56,15 +63,10 @@ export const Sidebar = (() => {
 	// <ul></ul>
 	const projects = Ul();
 	projects.addClasses(["projects"]);
-	projects.render(cols[1].getElem, "afterbegin");
+	projects.render(cols[1].getElem, "beforeend");
 
 	//<li><a></a></li>
-	const projectItems = _createLiItems([
-		"Today",
-		"This Week",
-		"Upcoming",
-		"More Filters",
-	]);
+	const projectItems = _createLiItems(["Work", "Study"]);
 	projectItems.forEach((item) => {
 		item.render(projects.getElem, "afterbegin");
 	});
