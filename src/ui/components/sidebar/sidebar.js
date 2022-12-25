@@ -5,6 +5,7 @@ import { Ul } from "../../elem/ul/ul";
 import { Li } from "../../elem/li/li";
 import { A } from "../../elem/a/a";
 import { Heading } from "../../elem/heading/heading";
+import { Button } from "../../elem/button/button";
 
 export const Sidebar = (() => {
 	// <aside>
@@ -38,6 +39,23 @@ export const Sidebar = (() => {
 	const projectHeading = Heading(3);
 	projectHeading.addContent("Projects");
 	projectHeading.render(cols[1].getElem, "afterbegin");
+
+	// <button id="add-project"></button>
+	const addProjectButton = Button();
+	addProjectButton.addOrChangeAttribute("id", "project-btn");
+	addProjectButton.addOrChangeAttribute("aria-controls", "add-project");
+	addProjectButton.addOrChangeAttribute("aria-expanded", "false");
+	addProjectButton.addContent("Add Project");
+	addProjectButton.getElem.addEventListener("click", () => {
+		const addProject = document.querySelector("#add-project");
+		const addVisibility =
+			addProjectButton.getElem.getAttribute("aria-expanded");
+		if (addVisibility === "false") {
+			addProject.setAttribute("data-visible", "true");
+			addProjectButton.getElem.setAttribute("aria-expanded", "true");
+		}
+	});
+	addProjectButton.render(projectHeading.getElem, "afterend");
 
 	// <ul></ul>
 	const schedule = Ul();

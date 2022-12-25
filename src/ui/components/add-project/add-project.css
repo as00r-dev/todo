@@ -1,0 +1,24 @@
+.add-project {
+	display: none;
+	position: fixed;
+	inset: 0 0 0 0;
+	z-index: 7000;
+	transition: all 0.3s ease-in;
+}
+
+.add-project .container {
+	width: min(250px, 50vw);
+	position: relative;
+}
+
+.add-project .container .icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(50%, -50%);
+	z-index: 8000;
+}
+
+.add-project[data-visible="true"] {
+	display: flex;
+}
