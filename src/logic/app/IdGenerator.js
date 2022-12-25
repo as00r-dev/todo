@@ -1,11 +1,17 @@
 export const IdGenerator = (() => {
 	let _id = 0;
 
-	const newId = () => {
+	const addIdTo = (obj) => {
+		if (!obj.id) {
+			obj.id = _newId();
+		}
+	};
+
+	const _newId = () => {
 		return _id++;
 	};
 
 	return {
-		newId,
+		addIdTo,
 	};
 })();

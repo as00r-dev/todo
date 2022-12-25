@@ -13,7 +13,7 @@ export const TodoList = () => {
 		});
 	};
 
-	const getTodoAt = (position) => {
+	const getAt = (position) => {
 		return _todoList[position];
 	};
 
@@ -25,6 +25,6 @@ export const TodoList = () => {
 		getLength,
 		pushToList,
 		removeFromList,
-		getTodoAt,
+		getAt,
 	};
 };

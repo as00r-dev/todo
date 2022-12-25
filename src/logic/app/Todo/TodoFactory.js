@@ -1,4 +1,4 @@
-import { IdGenerator } from "./IdGenerator";
+import { IdGenerator } from "../IdGenerator";
 
 export const TodoFactory = (title, description, priority, project, dueDate) => {
 	const todo = {
@@ -9,12 +9,7 @@ export const TodoFactory = (title, description, priority, project, dueDate) => {
 		dueDate,
 	};
 
-	// Assign an ID if no id exists
-	(() => {
-		if (!todo.id) {
-			todo.id = IdGenerator.newId();
-		}
-	})();
+	IdGenerator.addIdTo(todo);
 
 	const createTestTodo = () => {
 		todo.title = "name";
@@ -24,7 +19,7 @@ export const TodoFactory = (title, description, priority, project, dueDate) => {
 		todo.dueDate = "01/01/2023";
 	};
 
-	const modifyTodo = (updatedTodo) => {
+	const modify = (updatedTodo) => {
 		if (updatedTodo.title) todo.title = updatedTodo.title;
 		if (updatedTodo.description) todo.description = updatedTodo.description;
 		if (updatedTodo.priority) todo.priority = updatedTodo.priority;
@@ -56,19 +51,19 @@ export const TodoFactory = (title, description, priority, project, dueDate) => {
 		return `${todo.id}`;
 	};
 
-	const getTodo = () => {
+	const get = () => {
 		return todo;
 	};
 
 	return {
-		modifyTodo,
+		modify,
 		getTitle,
 		getDesc,
 		getPriority,
 		getProject,
 		getDueDate,
 		getId,
-		getTodo,
+		get,
 		createTestTodo,
 	};
 };
