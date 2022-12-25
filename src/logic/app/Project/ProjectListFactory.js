@@ -13,7 +13,7 @@ export const ProjectList = () => {
 		});
 	};
 
-	const getprojectAt = (position) => {
+	const getAt = (position) => {
 		return _projectList[position];
 	};
 
@@ -25,6 +25,6 @@ export const ProjectList = () => {
 		getLength,
 		pushToList,
 		removeFromList,
-		getprojectAt,
+		getAt,
 	};
 };
