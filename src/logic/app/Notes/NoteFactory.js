@@ -1,38 +1,38 @@
 import { IdGenerator } from "../IdGenerator";
 
 export const Note = (title, description, project) => {
-	const _note = {
+	const note = {
 		title,
 		description,
 		project,
 	};
 
-	IdGenerator.addIdTo(_note);
+	IdGenerator.addIdTo(note);
 
 	const getTitle = () => {
-		return `${_note.title}`;
+		return `${note.title}`;
 	};
 
 	const getDesc = () => {
-		return `${_note.description}`;
+		return `${note.description}`;
 	};
 
 	const getProject = () => {
-		return `${_note.project}`;
+		return `${note.project}`;
 	};
 
 	const getId = () => {
-		return `${_note.id}`;
+		return `${note.id}`;
 	};
 
 	const get = () => {
-		return _note;
+		return note;
 	};
 
 	const modify = (obj) => {
-		if (obj.title) _note.title = obj.title;
-		if (obj.description) _note.description = obj.description;
-		if (obj.project) _note.project = obj.project;
+		if (obj.title) note.title = obj.title;
+		if (obj.description) note.description = obj.description;
+		if (obj.project) note.project = obj.project;
 	};
 
 	return {
