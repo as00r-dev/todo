@@ -4,8 +4,6 @@ import { Div } from "../../elem/div/div";
 import { Button } from "../../elem/button/button";
 import { Form } from "../../elem/form/form";
 import { Input } from "../../elem/input/input";
-import { Select } from "../../elem/select/select";
-import { Option } from "../../elem/option/option";
 
 export const AddProject = (() => {
 	// <div class="add-project">
