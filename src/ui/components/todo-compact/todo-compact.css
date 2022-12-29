@@ -1,0 +1,14 @@
+.todo-compact {
+	--p-color: transparent;
+	position: relative;
+}
+
+.todo-compact::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 5px;
+	height: 100%;
+	background: var(--p-color);
+}
