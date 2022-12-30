@@ -22,7 +22,7 @@ export const TodoCompact = ((
 		"pt-regular",
 		"ps-regular",
 		"pd-regular",
-		"justify-center",
+		"justify-between",
 		"box-shadow-400",
 		"br-400",
 	]);
