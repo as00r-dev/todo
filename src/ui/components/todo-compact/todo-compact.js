@@ -5,15 +5,15 @@ import { Heading } from "../../elem/heading/heading";
 import { Input } from "../../elem/input/input";
 import { Paragraph } from "../../elem/paragraph/paragraph";
 
-export const TodoCompact = ((
-	todoObject = {
+export const TodoCompact = (() => {
+	const _todoObject = {
 		title: "title",
 		description: "desc",
 		priority: "red",
 		project: "default",
 		dueDate: "01/01/2023",
-	}
-) => {
+	};
+
 	const todo = Div();
 	todo.addClasses([
 		"container",
@@ -27,7 +27,16 @@ export const TodoCompact = ((
 		"br-400",
 	]);
 
-	todo.getElem.style.setProperty("--p-color", todoObject.priority);
+	const initializeObject = (obj) => {
+		_todoObject.title = obj.title;
+		_todoObject.description = obj.description;
+		_todoObject.priority = obj.priority;
+		_todoObject.project = obj.project;
+		_todoObject.dueDate = obj.dueDate;
+		todo.getElem.style.setProperty("--p-color", _todoObject.priority);
+		todoTitle.addContent(_todoObject.title);
+		deadline.addContent(_todoObject.dueDate);
+	};
 
 	const checkbox = Input();
 	checkbox.addOrChangeAttribute("type", "checkbox");
@@ -38,7 +47,6 @@ export const TodoCompact = ((
 	todoBody.render(checkbox.getElem, "afterend");
 
 	const todoTitle = Heading(3);
-	todoTitle.addContent(todoObject.title);
 	todoTitle.render(todoBody.getElem, "afterbegin");
 
 	const todoDetails = Button();
@@ -46,8 +54,7 @@ export const TodoCompact = ((
 	todoDetails.render(todoTitle.getElem, "afterend");
 
 	const deadline = Paragraph();
-	deadline.addContent(todoObject.dueDate);
 	deadline.render(todoDetails.getElem, "afterend");
 
-	return todo;
+	return { todo, initializeObject };
 })();

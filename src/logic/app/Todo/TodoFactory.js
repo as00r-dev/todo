@@ -1,6 +1,12 @@
 import { IdGenerator } from "../IdGenerator";
 
-export const TodoFactory = (title, description, priority, project, dueDate) => {
+export const TodoFactory = ((
+	title,
+	description,
+	priority,
+	project,
+	dueDate
+) => {
 	const todo = {
 		title,
 		description,
@@ -66,4 +72,4 @@ export const TodoFactory = (title, description, priority, project, dueDate) => {
 		get,
 		createTestTodo,
 	};
-};
+})();

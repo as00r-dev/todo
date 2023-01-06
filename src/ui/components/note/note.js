@@ -4,15 +4,15 @@ import { Heading } from "../../elem/heading/heading";
 import { Paragraph } from "../../elem/paragraph/paragraph";
 import { Button } from "../../elem/button/button";
 
-export const Note = ((
-	noteObj = {
+export const Note = (() => {
+	const _noteObj = {
 		title: "title",
 		description: "description",
 		project: "default",
-	}
-) => {
-	const noteWrapper = Div();
-	noteWrapper.addClasses([
+	};
+
+	const note = Div();
+	note.addClasses([
 		"container",
 		"flex",
 		"flex-col",
@@ -26,16 +26,22 @@ export const Note = ((
 		"md-regular",
 	]);
 
+	const initializeObject = (obj) => {
+		_noteObj.title = obj.title;
+		_noteObj.description = obj.description;
+		_noteObj.project = obj.project;
+		noteTitle.addContent(_noteObj.title);
+		noteDesc.addContent(_noteObj.description);
+		noteProject.addContent(_noteObj.project);
+	};
+
 	const noteTitle = Heading(3);
-	noteTitle.addContent(noteObj.title);
-	noteTitle.render(noteWrapper.getElem, "afterbegin");
+	noteTitle.render(note.getElem, "afterbegin");
 
 	const noteDesc = Paragraph();
-	noteDesc.addContent(noteObj.description);
 	noteDesc.render(noteTitle.getElem, "afterend");
 
 	const noteProject = Paragraph();
-	noteProject.addContent(noteObj.project);
 	noteProject.render(noteDesc.getElem, "afterend");
 
 	const buttonsWrapper = Div();
@@ -50,5 +56,5 @@ export const Note = ((
 	removeNote.addContent("remove");
 	removeNote.render(buttonsWrapper.getElem, "afterbegin");
 
-	return noteWrapper;
+	return { note, initializeObject };
 })();

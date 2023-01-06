@@ -3,7 +3,9 @@ import { Section } from "../../elem/section/section";
 import { AddProject } from "../add-project/add-project";
 import { TodoCompact } from "../todo-compact/todo-compact";
 import { Note } from "../note/note";
+import { Project } from "../project/project";
 import { Div } from "../../elem/div/div";
+import { TodoFactory } from "../../../logic/app/Todo/TodoFactory";
 
 export const Dashboard = (() => {
 	const dashboard = Section();
@@ -15,8 +17,27 @@ export const Dashboard = (() => {
 
 	AddTodo.render(container.getElem, "afterbegin");
 	AddProject.render(container.getElem, "afterbegin");
-	TodoCompact.render(container.getElem, "afterbegin");
-	Note.render(container.getElem, "afterbegin");
+	const firstTodo = TodoCompact;
+	firstTodo.initializeObject({
+		title: "hello",
+		description: "test",
+		priority: "blue",
+		project: "def",
+		dueDate: "10/01/2023",
+	});
+	firstTodo.todo.render(container.getElem, "afterbegin");
+	const firstNote = Note;
+	firstNote.initializeObject({
+		title: "hello",
+		description: "hello",
+		project: "hello",
+	});
+	firstNote.note.render(container.getElem, "afterbegin");
+	const firstProject = Project;
+	firstProject.initializeObject({
+		name: "hello",
+	});
+	firstProject.project.render(container.getElem, "beforeend");
 
 	return dashboard;
 })();

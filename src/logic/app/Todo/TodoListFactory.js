@@ -1,4 +1,4 @@
-export const TodoList = () => {
+export const TodoList = (() => {
 	const _todoList = [];
 
 	const pushToList = (todo) => {
@@ -27,4 +27,4 @@ export const TodoList = () => {
 		removeFromList,
 		getAt,
 	};
-};
+})();

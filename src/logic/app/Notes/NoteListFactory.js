@@ -1,4 +1,4 @@
-export const NoteList = () => {
+export const NoteList = (() => {
 	const _noteList = [];
 
 	const pushToList = (note) => {
@@ -27,4 +27,4 @@ export const NoteList = () => {
 		removeFromList,
 		getAt,
 	};
-};
+})();

@@ -1,6 +1,6 @@
 import { IdGenerator } from "../IdGenerator";
 
-export const Note = (title, description, project) => {
+export const Note = ((title, description, project) => {
 	const note = {
 		title,
 		description,
@@ -43,4 +43,4 @@ export const Note = (title, description, project) => {
 		modify,
 		getProject,
 	};
-};
+})();
