@@ -5,7 +5,7 @@ import { Heading } from "../../elem/heading/heading";
 import { Input } from "../../elem/input/input";
 import { Paragraph } from "../../elem/paragraph/paragraph";
 
-export const TodoCompact = (() => {
+export const TodoCompact = () => {
 	const _todoObject = {
 		title: "title",
 		description: "desc",
@@ -22,6 +22,7 @@ export const TodoCompact = (() => {
 		"pt-regular",
 		"ps-regular",
 		"pd-regular",
+		"md-regular",
 		"justify-between",
 		"box-shadow-400",
 		"br-400",
@@ -57,4 +58,4 @@ export const TodoCompact = (() => {
 	deadline.render(todoDetails.getElem, "afterend");
 
 	return { todo, initializeObject };
-})();
+};

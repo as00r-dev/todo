@@ -4,7 +4,7 @@ import { Heading } from "../../elem/heading/heading";
 import { Paragraph } from "../../elem/paragraph/paragraph";
 import { Button } from "../../elem/button/button";
 
-export const Note = (() => {
+export const Note = () => {
 	const _noteObj = {
 		title: "title",
 		description: "description",
@@ -57,4 +57,4 @@ export const Note = (() => {
 	removeNote.render(buttonsWrapper.getElem, "afterbegin");
 
 	return { note, initializeObject };
-})();
+};

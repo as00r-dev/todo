@@ -17,7 +17,8 @@ export const Dashboard = (() => {
 
 	AddTodo.render(container.getElem, "afterbegin");
 	AddProject.render(container.getElem, "afterbegin");
-	const firstTodo = TodoCompact;
+
+	const firstTodo = TodoCompact();
 	firstTodo.initializeObject({
 		title: "hello",
 		description: "test",
@@ -26,18 +27,37 @@ export const Dashboard = (() => {
 		dueDate: "10/01/2023",
 	});
 	firstTodo.todo.render(container.getElem, "afterbegin");
-	const firstNote = Note;
+
+	const secondTodo = TodoCompact();
+	secondTodo.initializeObject({
+		title: "hello2",
+		description: "test2",
+		priority: "blue",
+		project: "def2",
+		dueDate: "12/01/2023",
+	});
+	secondTodo.todo.render(firstTodo.todo.getElem, "afterend");
+
+	const firstNote = Note();
 	firstNote.initializeObject({
 		title: "hello",
 		description: "hello",
 		project: "hello",
 	});
 	firstNote.note.render(container.getElem, "afterbegin");
-	const firstProject = Project;
+
+	const firstProject = Project();
+	firstProject.project.render(container.getElem, "beforeend");
+
+	firstProject.getNotes().pushToList({
+		title: "hello",
+		description: "hello",
+		project: "hello",
+	});
+
 	firstProject.initializeObject({
 		name: "hello",
 	});
-	firstProject.project.render(container.getElem, "beforeend");
 
 	return dashboard;
 })();
