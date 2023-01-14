@@ -13,6 +13,10 @@ aside[data-visible="false"] {
 	transform: translateX(-100%);
 }
 
+aside * {
+	align-items: flex-start;
+}
+
 @media (min-width: 768px) {
 	aside {
 		width: min(30vw, 30rem);
